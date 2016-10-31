@@ -1,0 +1,185 @@
+%
+%
+%	Microtype macht einige Sachen etwas schöner. Sie dazu die Paketbeschreibung
+\usepackage[protrusion=true,expansion=true,final]{microtype}
+%
+%
+%	Blindtext
+\usepackage{blindtext} %um mit leerem text zu füllen
+%Benötigt um Kopfzeile je nach Kapitel zu setzen
+\usepackage{xifthen}
+%
+%
+%\usepackage[numbers,round]{natbib}
+%	Coole Kopfzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}	
+%
+%	Kolumnentitel ohne Nummer davor
+\renewcommand{\sectionmarkformat}{}
+%
+%	Alle Felder löschen
+\fancyhf{}	
+%
+%	Kopfzeile nicht in Grossschrift und ohne Nummerierung
+\renewcommand{\sectionmark}[1]%
+	{\markboth{ {} #1}{}}
+\renewcommand{\subsectionmark}[1]%
+	{\markright{ {} #1}{}}
+%
+%	Keine Linie zur Abtrennung der Kopfzeile
+\renewcommand{\headrulewidth}{0mm}
+%
+%	Header
+\fancyhead[R]{\parbox{\textwidth}{
+	\begin{flushright}\small
+		\textbf{\nouppercase\leftmark\phantom{\hspace*{1mm}}}{\textbar}\\%
+		\vspace*{-1.1mm} %zeilenabstand etwas kürzen
+		%zweite Zeile:		
+		\ifthenelse{\dimtest{\widthof{\rightmark}}{<}{3mm}}{\phantom{\textbar}}
+		{\rightmark\hspace*{1mm}{\textbar}}
+	\end{flushright}
+}}
+%
+\fancyfoot[R]{\parbox{0.60\textwidth}{\begin{flushright}%
+\textbf{\thepage}\hspace*{1mm}%
+\end{flushright}}\hspace{0cm}}		% Seitenzahl rechts bzw. links unten
+%
+%
+%	1,5facher Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing
+%
+%
+%	Deutsche Anpassungen
+\usepackage[english]{babel}
+\usepackage[ansinew]{inputenc} %iso 8859-1 (latin-1) als standart
+\usepackage{scrhack}
+%das funktioniert mit Windows gut
+%
+%
+% Packages für Grafiken & Tabellen
+\usepackage{graphicx} 			%Zum Laden von Grafiken
+\usepackage{ctable}				%bunte Tabellen
+%
+%
+%	Hyperref (klickbare Links im PDF)
+%\usepackage[bookmarksnumbered,draft]{hyperref} 
+\usepackage[bookmarksnumbered,final]{hyperref} %links ins web und innerhalb des pdf
+%%für den Druck diese Zeile nutzen, damit die Links nicht gesetzt werden
+%\usepackage[bookmarksnumbered,ocgcolorlinks,  linkcolor=black,        citecolor=black,        filecolor=black,        urlcolor=black,]{hyperref}
+%
+%
+%	Bricht URLs um, besonders im Literaturverz. für den Druck auskommentieren
+%	War in meiner alten Vorlage drin, scheint man mit einem aktuellen hyperref-Paket nicht mehr zu brauchen (es sei dennm man setzt über DVI und PS nach PDF und nicht mit PDFLaTeX)
+% \usepackage{breakurl}
+%
+%
+%	Mehrere Bilder in einer Figure
+\usepackage{subfigure}
+%
+%
+%	Farben
+\usepackage{color}
+\definecolor{DarkGrey}{cmyk}{0,0,0,0.75} % für Marginalien
+\definecolor{mint}{cmyk}{1, 1, 1, 1} %FH-Mint mit 25% Schwarz, da es bei der dünnen Schrift sonst sehr unter geht.
+%
+%
+%	Listing-Umgebungen
+\usepackage[final]{listings}		%Quellcode-Listings. final, damit die auch bei draft gesetzt werden
+\usepackage{marvosym}			%paket, für das Enter-Symbol
+%Javascript
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, document, innerHTML, getElementById}
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+%
+%
+%	Für \floarbarrier, damit man floating-Objekte aufhalten kann (z.B. vor einer neuen section alle floats setzen)
+\usepackage{placeins}
+%
+%
+%	Dinge
+\clubpenalty = 10000 % schliesst Schusterjungen aus
+\widowpenalty = 10000 % schliesst Hurenkinder aus
+%
+%
+%	Um das Logo absolut zu Posistionieren
+%	In dieser Vorlage wird das FH-Logo nicht mehr benutzt, weil es auf den Umschlag kommt
+%\usepackage[absolute]{textpos}
+%\setlength{\TPHorizModule}{1mm}
+%\setlength{\TPVertModule}{\TPHorizModule}
+%\textblockorigin{0mm}{0mm}
+%
+%
+%	Absatzeinzug verkleinern (bzw. eliminieren)
+\setlength{\parindent}{0cm} 
+%
+%
+%	Abkürzungsverzeichnis
+\usepackage[smaller]{acronym} 
+%	Siehe dazu: http://www.matthias-schlecker.de/acronym-abkuerzungsverzeichnis-mit-latex-automatisieren
+% 
+%
+%	Manuelle Worttrennung
+\hyphenation{Ad-mi-nis-tra-tor Get-Re-quest Get-Re-sponse  Get-Next-Request Get-Bulk-Request Pro-gram-mie-rung fast-ether-net hexa-de-zi-mal-en}
+%	Funktioniert trotzdem nicht mit Umlauten. Da dann im Text so trennen: Über\-nahme\-er\-klärung
+%
+%
+%	Überschriften im FH-Aachen-Mint
+\addtokomafont{section}{\normalfont\Huge\color{mint}\hspace*{-0cm}} 
+%
+%
+%	Abstand vor Kapitelüberschriften
+\let\stdsection\section 
+\renewcommand\section{\newpage\vspace*{1cm}\stdsection}
+%
+%
+%	Ein wenig an der Geometrie herumzupfen um in die Vorlage zu passen
+\usepackage{geometry}
+%	Die auskommentierte Zeile nutzen um die Rahmen der Bereiche anzuzeigen
+%\geometry{a4paper,left=2.7cm,right=6.7cm,top=2.0cm,bottom=4.4cm,marginparsep=7mm,marginparwidth=3.4cm,driver=pdftex,showframe}
+\geometry{a4paper,left=2.7cm,right=2.7cm,top=2.5cm,bottom=4.4cm,marginparsep=7mm,marginparwidth=3.4cm,driver=pdftex}
+%
+%
+%	Marginalien in grau und in kleiner
+%\renewcommand\marginline[1]{%
+%  \marginpar[{\begin{flushleft}\small\raggedleft\textcolor{DarkGrey}{#1}\end{flushleft}}]%
+%            {{\small\raggedright\textcolor{DarkGrey}{#1}}}%
+%}
+%
+%	Ich weiß nicht mehr, wozu ich das mal gebraucht habe. Eigentlich ist das die Aufgabe von Geometry. Daher erstmal auskommentieren
+%\setlength{\headheight}{48pt}
+%
+
+\usepackage{ccicons}
+
+
+\usepackage{booktabs}
+%
+\usepackage[T1]{fontenc}
+%
+%
+%	Iwona-Schriften
+\usepackage[light,math]{iwona}
+\usepackage{amsmath}
+%
+\usepackage{longtable}
+\usepackage{caption}
+
+% Literaturverzeichnis-Header umdefinieren, damit oben rechts nicht zwei Mal "Literatur" steht
+\makeatletter
+\renewcommand*\bib@heading{%
+  \section*{\bibname}%
+  \@mkboth{\bibname}{}}%
+\makeatother

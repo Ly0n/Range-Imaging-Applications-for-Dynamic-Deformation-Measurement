@@ -1,0 +1,115 @@
+ %	Dies ist eine Vorlage von Tobias Banaszak  
+%	tobias.banaszak@gmail.com
+%	Einen Umschlag/Einband liefert diese Vorlage nicht, da die Schriftart der FH Aachen nicht mal so eben in *TeX genutzt werden kann und es genau dafür in diesem Fall schon eine Indesign-Vorlage gibt
+% 
+\documentclass[
+12pt,								% Schriftgre (12pt, 11pt (Standard))
+oneside,							% einseitiges Layout
+listof=flat,						% setzt z.B. das Abbvz neu, falls die Nummern in die Beschreibung rein ragt
+%draft,								% überlange Zeilen in Ausgabe kennzeichnen, setzt keine Bilder un Listings.
+numbers=noenddot,		% macht aus der Überschrift 1.1. den letzten Punkt weg
+%abstracton						%setzt "abstact"/"zusammenfassung"
+]{scrartcl}
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pakete einbinden etc...
+\input{pre.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%für den PDF-Reader
+\hypersetup{
+	pdfpagelayout=TwoPageRight,	%erste Seite ist Titelseite
+	pdfstartview=Fit,
+	pdfauthor={Tobias Augspurger}, 
+	pdftitle={Range Imaging Applications for Dynamic Deformation Measurement},
+	pdfsubject={Master's thesis},
+	pdfkeywords={Time-of-Flight | Kinect 2 | Deformation | Dynamic}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+\begin{document}
+%	Standartumgebung für Codelistings setzen
+\lstset{showstringspaces=false,frame=lines,breaklines=true,language=[Sharp]C,numberbychapter=true,captionpos=b,prebreak={\Righttorque},basicstyle=\footnotesize}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Titelseite
+
+\input{Deckblatt.tex}%
+
+% Seitengeometrie für den Titelseite & Verzeichnisse anpassen
+\newgeometry{left=2.7cm,right=2.7cm,top=3.05cm,bottom=3.3cm,marginparsep=0mm,marginparwidth=0.0cm}
+\onehalfspacing
+\newpage
+\input{Erklaerung.tex}
+\newpage
+\section*{Abstract}
+\input{abstract.tex}
+\section*{Acknowledgment}
+\input{acknowledgment.tex}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Erzeugen von Verzeichnissen
+\renewcommand{\listfigurename}{List of figures}
+\markright{}%gegen die zweite zeile im header
+\tableofcontents			% Inhaltsverzeichnis
+\newpage
+%
+\markright{}					% gegen die zweite zeile im header
+%\listoftables				% Tabellenverzeichnis
+%\thispagestyle{empty}
+\input{Abkuerzungsverz.tex}
+\newpage
+\input{List_of_symboles.tex}
+\newpage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Der Text
+\restoregeometry			% Seitengeometrie zurück setzen
+%\blinddocument
+%
+%	Motivation
+\input{Introduction.tex}
+%	Stand der Technik
+\input{SdT.tex}
+%	Hauptteil
+\input{Hauptteil.tex}
+%	Fazit und Ausblick
+\input{Experimental_setup.tex}
+\input{Ausblick}%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Der Anhang
+\appendix							% Beginn des Anhangs
+%geometrie wechseln
+\newgeometry{left=2.7cm,right=2.7cm,top=3.05cm,bottom=3.3cm,marginparsep=0mm,marginparwidth=0.0cm}
+\input{Anhang}
+%
+%
+\input{Quellcode.tex}
+%
+%
+\section{Sourcecode and Documentation on CD}
+$dynKinect\_0\_3\_thesis\_evaluation.m$\\
+$dynKinect\_0\_31\_harmonics.m$\\
+$FastVarMap.m$\\
+$Raw~and~processed~measurement~data$\\
+$Reference~papers~and~documents$\\
+$Pictures~of~experimental~setup$\\
+$Latex~source~code~and~all~figures$\\
+%	Lieraturverz.
+\markboth{Literatur}{}
+\markright{}
+\bibliographystyle{unsrt}
+\markboth{Literatur}{}
+\bibliography{BA_Bib}
+%
+\listoffigures				% Abbildungsverzeichnis
+\newpage
+\pagebreak
+%Erklärung
+\thispagestyle{empty}			%keine Seitenzahlen
+\end{document}

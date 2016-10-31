@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="600"
+   height="350"
+   id="svg3258">
+  <defs
+     id="defs3260" />
+  <path
+     d="M 328.25,109.56 L 321.41,110.31 C 321.41,110.31 321.38,110.34 321.38,110.34 L 294.41,113.34 C 297.5,114.97 300.01,117.33 301.84,120.09 C 297.55,122.24 301.84,120.09 261.41,140.31 L 263.59,144.66 C 277.07,137.92 290.55,131.18 304.03,124.44 C 305.15,127.56 305.49,130.96 304.91,134.38 L 323.34,114.78 C 323.43,114.74 323.51,114.7 323.59,114.66 L 323.53,114.56 L 328.25,109.56 z M 338.25,149.56 L 331.41,150.31 C 331.41,150.31 331.38,150.34 331.38,150.34 L 304.41,153.34 C 307.5,154.97 310.01,157.33 311.84,160.09 C 307.55,162.24 311.84,160.09 271.41,180.31 L 273.59,184.66 C 287.07,177.92 300.55,171.18 314.03,164.44 C 315.15,167.56 315.49,170.96 314.91,174.38 L 333.34,154.78 C 333.43,154.74 333.51,154.7 333.59,154.66 L 333.53,154.56 L 338.25,149.56 z"
+     id="path3295"
+     style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4.878;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     d="M 312.5,252.5 C 312.5,258.02 308.02,262.5 302.5,262.5 C 296.98,262.5 292.5,258.02 292.5,252.5 C 292.5,246.98 296.98,242.5 302.5,242.5 C 308.02,242.5 312.5,246.98 312.5,252.5 z"
+     id="path8888"
+     style="stroke-width:4.878;stroke-linecap:butt;stroke-miterlimit:4;stroke-dashoffset:0" />
+  <path
+     d="M 352.5,197.66 L 452.5,197.66 M 352.5,102.46 L 402.5,193.92 L 452.5,102.46 L 352.5,102.46 z M 302.5,252.5 L 402.5,252.5 L 402.5,52.5 L 402.5,52.5 M 302.5,302.5 L 302.5,252.5 L 202.5,252.5 L 202.5,52.5 M 152.5,102.5 L 252.5,102.5 M 152.5,197.7 L 202.5,106.25 L 252.5,197.7 L 152.5,197.7 z M 217.5,37.5 C 217.5,45.78 210.78,52.5 202.5,52.5 C 194.22,52.5 187.5,45.78 187.5,37.5 C 187.5,29.22 194.22,22.5 202.5,22.5 C 210.78,22.5 217.5,29.22 217.5,37.5 z M 417.5,37.5 C 417.5,45.78 410.78,52.5 402.5,52.5 C 394.22,52.5 387.5,45.78 387.5,37.5 C 387.5,29.22 394.22,22.5 402.5,22.5 C 410.78,22.5 417.5,29.22 417.5,37.5 z M 317.5,317.5 C 317.5,325.78 310.78,332.5 302.5,332.5 C 294.22,332.5 287.5,325.78 287.5,317.5 C 287.5,309.22 294.22,302.5 302.5,302.5 C 310.78,302.5 317.5,309.22 317.5,317.5 z"
+     id="path1920"
+     style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:4.87835;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     x="16.162188"
+     y="145.95236"
+     id="text2440"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"><tspan
+       x="16.162188"
+       y="145.95236"
+       id="tspan2442"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">Laser-</tspan><tspan
+       x="16.162188"
+       y="195.95236"
+       id="tspan2444"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1">Diode</tspan><tspan
+       x="468.74976"
+       y="145.95236"
+       id="tspan2448">Photo-</tspan><tspan
+       x="468.74976"
+       y="195.95236"
+       id="tspan2450">Diode</tspan></text>
+</svg>
