@@ -1,4 +1,4 @@
-# Range Imaging Applications for Dynamic Deformation Measurment
+# Range Imaging Applications for Dynamic Deformation Measurement
 
 **My Master Thesis about the measurement of surface dynamics with Time-of-Flight Cameras like the Kinect 2** 
 
