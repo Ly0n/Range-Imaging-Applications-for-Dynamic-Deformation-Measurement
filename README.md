@@ -4,7 +4,7 @@
 
 ![alt text](/doc/pictures/PointCloud.png)
 
-![alt text](/doc/pictures/Experimental_setup_Fina.svg)
+![alt text](/doc/pictures/Experimental_setup_Final.svg)
 ## Abstract
 
 Three-dimensional Time-of-Flight (ToF) range cameras improved significantly in accuracy,
