@@ -1,13 +1,16 @@
 # Range Imaging Applications for Dynamic Deformation Measurement
 Tobias Augspurger
-
-
-**My Master Thesis about the measurement of surface dynamics with Time-of-Flight Cameras like the Kinect 2** 
-Thanks for all constributor at FH Aachen and FH Düsseldorf.
+---   
+Thanks to all constributors at FH Aachen Aerospace Engineering and FH Düsseldorf.
 26. January 2015
+---
+
 ![alt text](/doc/pictures/PointCloud.png)
 
+---   
+
 ![alt text](/doc/pictures/Amp_dis_3D_0_7m.png)
+Membrane Surface Amplitude Distribution
 ## Abstract
 
 Three-dimensional Time-of-Flight (ToF) range cameras improved significantly in accuracy,
