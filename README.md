@@ -45,5 +45,3 @@ the amplitude and frequency distribution in the complete field of view over a ce
 
 Thanks senfi for your latex template:
 https://github.com/senfi/Abschlussarbeit-Vorlage
-
-**Please contact me for furher details**
