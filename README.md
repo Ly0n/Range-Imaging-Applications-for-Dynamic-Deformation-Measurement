@@ -1,8 +1,8 @@
 # Range Imaging Applications for Dynamic Deformation Measurement
 Tobias Augspurger
 ---   
-Thanks to all constributors at FH Aachen Aerospace Engineering.
-26. January 2015
+Thanks to all constributors at FH Aachen - Aerospace Engineering.
+
 ---
 
 ![alt text](/doc/pictures/PointCloud.png)
